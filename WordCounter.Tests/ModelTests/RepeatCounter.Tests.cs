@@ -30,7 +30,7 @@ namespace WordCounter.Tests
         {
             RepeatCounter testRepeatCounter = new RepeatCounter();
             int testTotal = 4;
-            testRepeatCounter.IncrementTotalCount(); * testTotal;
+            while(testRepeatCounter.GetTotalCount() < 4) testRepeatCounter.IncrementTotalCount();
             Assert.AreEqual(testTotal, testRepeatCounter.GetTotalCount());
         }
     }
