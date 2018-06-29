@@ -159,11 +159,11 @@ namespace WordCounter.Tests
         {
             RepeatCounter testRepeatCounter = new RepeatCounter();
             string testWord = "test";
-            string testPhrase = "test, and then we test.";
+            string testPhrase = "test, and then we .test. for test! -test-";
             testRepeatCounter.SetUserWord(testWord);
             testRepeatCounter.SetUserPhrase(testPhrase);
             testRepeatCounter.GetOutcomeWordsInPhrase();
-            Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
+            Assert.AreEqual(4, testRepeatCounter.GetTotalCount());
         }
 
 
