@@ -130,6 +130,17 @@ namespace WordCounter.Tests
             Assert.AreEqual(4, testRepeatCounter.GetTotalCount());
         }
 
+        [TestMethod]
+        public void GetOutcomeWordsInPhrase_GetsOutcomeeNumberInPhrase_Int()
+        {
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string testWord = "33";
+            string testPhrase = "and 33 test and we 33 testing";
+            testRepeatCounter.SetUserWord(testWord);
+            testRepeatCounter.SetUserPhrase(testPhrase);
+            testRepeatCounter.GetOutcomeWordsInPhrase();
+            Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
+        }
 
 
     }
