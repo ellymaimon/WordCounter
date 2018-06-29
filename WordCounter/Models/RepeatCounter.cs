@@ -76,6 +76,5 @@ namespace WordCounter
             if (GetUserWord().Length == 1) GetOutcomeLettersInWord();
             else GetOutcomeWordsInPhrase();
         }
-
     }
 }

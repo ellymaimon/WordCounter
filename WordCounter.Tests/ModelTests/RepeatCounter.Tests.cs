@@ -200,6 +200,5 @@ namespace WordCounter.Tests
             testRepeatCounter.GetOutcome();
             Assert.AreEqual(5, testRepeatCounter.GetTotalCount());
         }
-
     }
 }
