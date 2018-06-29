@@ -70,6 +70,18 @@ namespace WordCounter.Tests
             Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
         }
 
+        [TestMethod]
+        public void GetOutcome_GetsOutcomeLettersInMixedWord_Int()
+        {
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string testLetter = "g";
+            string testMixedWord = "3go3go2";
+            testRepeatCounter.SetUserWord(testLetter);
+            testRepeatCounter.SetUserPhrase(testMixedWord);
+            testRepeatCounter.GetOutcome();
+            Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
+        }
+
 
     }
 }
