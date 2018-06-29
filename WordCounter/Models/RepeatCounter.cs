@@ -7,6 +7,7 @@ namespace WordCounter
     {
         private string _userWord; //Word to test against
         private string _userPhrase; //Phrase to find Word in
+        private string[] _splitPhrase; //Phrase split into an array of words
         private int _totalCount; //Counts up the total to output at the end
 
         public void SetUserWord(string word)
@@ -27,6 +28,17 @@ namespace WordCounter
         public string GetUserPhrase()
         {
             return _userPhrase;
+        }
+
+        public void SplitPhrase()
+        {
+            char[] specialCharacters = {',', '.', '!', '?', ' ', '"', '-', '(', ')'};
+            _splitPhrase = GetUserPhrase().Split(specialCharacters);
+        }
+
+        public string[] GetSplitPhrase()
+        {
+            return _splitPhrase;
         }
 
         public void IncrementTotalCount()
@@ -52,9 +64,8 @@ namespace WordCounter
 
         public void GetOutcomeWordsInPhrase()
         {
-            char[] specialCharacters = {',', '.', '!', '?', ' ', '"', '-', '(', ')'};
-            string[] splitPhrase = GetUserPhrase().Split(specialCharacters);
-            foreach (string word in splitPhrase)
+            SplitPhrase();
+            foreach (string word in GetSplitPhrase())
             {
                 if (GetUserWord() == word) IncrementTotalCount();
             }
