@@ -5,12 +5,12 @@ using WordCounter;
 namespace WordCounter.Tests
 {
     [TestClass]
-    public class CounterTest
+    public class RepeatCounterTests
     {
         [TestMethod]
         public void DoIPass_TestToSeeIfThisWorks_True()
         {
-            
+
         }
     }
 }
