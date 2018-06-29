@@ -134,12 +134,24 @@ namespace WordCounter.Tests
         public void GetOutcomeWordsInPhrase_GetsOutcomeeNumberInPhrase_Int()
         {
             RepeatCounter testRepeatCounter = new RepeatCounter();
-            string testWord = "33";
+            string testNumber = "33";
             string testPhrase = "and 33 test and we 33 testing";
-            testRepeatCounter.SetUserWord(testWord);
+            testRepeatCounter.SetUserWord(testNumber);
             testRepeatCounter.SetUserPhrase(testPhrase);
             testRepeatCounter.GetOutcomeWordsInPhrase();
             Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
+        }
+
+        [TestMethod]
+        public void GetOutcomeWordsInPhrase_GetsOutcomeeNumberInWordsInPhrase_Int()
+        {
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string testNumber = "3";
+            string testPhrase = "and3 test and we 3 testing3";
+            testRepeatCounter.SetUserWord(testNumber);
+            testRepeatCounter.SetUserPhrase(testPhrase);
+            testRepeatCounter.GetOutcomeLettersInWord();
+            Assert.AreEqual(3, testRepeatCounter.GetTotalCount());
         }
 
 
