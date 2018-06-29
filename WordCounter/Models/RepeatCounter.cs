@@ -71,5 +71,11 @@ namespace WordCounter
             }
         }
 
+        public void GetOutcome()
+        {
+            if (GetUserWord().Length == 1) GetOutcomeLettersInWord();
+            else GetOutcomeWordsInPhrase();
+        }
+
     }
 }

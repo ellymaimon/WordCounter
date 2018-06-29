@@ -177,6 +177,29 @@ namespace WordCounter.Tests
             Assert.AreEqual(4, testRepeatCounter.GetTotalCount());
         }
 
+        [TestMethod]
+        public void GetOutcome_GetsOutcomeBasedOnSingleCharInput_Int()
+        {
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string testWord = "t";
+            string testPhrase = "test, and then we .Test. for test! -test-";
+            testRepeatCounter.SetUserWord(testWord);
+            testRepeatCounter.SetUserPhrase(testPhrase);
+            testRepeatCounter.GetOutcome();
+            Assert.AreEqual(9, testRepeatCounter.GetTotalCount());
+        }
+
+        [TestMethod]
+        public void GetOutcome_GetsOutcomeBasedOnMultipleCharInput_Int()
+        {
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string testWord = "test";
+            string testPhrase = "test, and TEST!, then we .Test. for test! -test-";
+            testRepeatCounter.SetUserWord(testWord);
+            testRepeatCounter.SetUserPhrase(testPhrase);
+            testRepeatCounter.GetOutcome();
+            Assert.AreEqual(5, testRepeatCounter.GetTotalCount());
+        }
 
     }
 }
