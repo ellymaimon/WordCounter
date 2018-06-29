@@ -200,5 +200,17 @@ namespace WordCounter.Tests
             testRepeatCounter.GetOutcome();
             Assert.AreEqual(5, testRepeatCounter.GetTotalCount());
         }
+
+        [TestMethod]
+        public void GetOutcome_GetsOutcomeBasedOnMultipleWordInput_Int()
+        {
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string testWord = "test me";
+            string testPhrase = "test, test me and test me";
+            testRepeatCounter.SetUserWord(testWord);
+            testRepeatCounter.SetUserPhrase(testPhrase);
+            testRepeatCounter.GetOutcome();
+            Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
+        }
     }
 }
