@@ -21,7 +21,7 @@ namespace WordCounter
 
         public void SetUserPhrase(string word)
         {
-            _userPhrase = word;
+            _userPhrase = word.ToLower();
         }
 
         public string GetUserPhrase()
