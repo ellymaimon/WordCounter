@@ -26,11 +26,11 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
-        public void GetSetTotalCount_GetSetTotalCount_Int()
+        public void IncrementGetTotalCount_IncrementGetTotalCount_Int()
         {
             RepeatCounter testRepeatCounter = new RepeatCounter();
             int testTotal = 4;
-            testRepeatCounter.SetTotalCount(testTotal);
+            testRepeatCounter.IncrementTotalCount(); * testTotal;
             Assert.AreEqual(testTotal, testRepeatCounter.GetTotalCount());
         }
     }
