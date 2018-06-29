@@ -45,5 +45,19 @@ namespace WordCounter.Tests
             testRepeatCounter.GetOutcome();
             Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
         }
+
+        [TestMethod]
+        public void GetOutcome_GetsOutcomeLettersInWordCaseInsensitive_Int()
+        {
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string testLetter = "t";
+            string testWord = "TesterT";
+            testRepeatCounter.SetUserWord(testLetter);
+            testRepeatCounter.SetUserPhrase(testWord);
+            testRepeatCounter.GetOutcome();
+            Assert.AreEqual(3, testRepeatCounter.GetTotalCount());
+        }
+
+
     }
 }
