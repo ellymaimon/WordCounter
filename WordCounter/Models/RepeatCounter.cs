@@ -7,6 +7,7 @@ namespace WordCounter
     {
         private string _userWord; //Word to test against
         private string _userPhrase; //Phrase to find Word in
+        private int _totalCount; //Counts up the total to output at the end
 
         public void SetUserWord(string word)
         {
@@ -27,5 +28,17 @@ namespace WordCounter
         {
             return _userPhrase;
         }
+
+        public void SetTotalCount(int total)
+        {
+            _totalCount = total;
+        }
+
+        public int GetTotalCount ()
+        {
+            return _totalCount;
+        }
+
+
     }
 }
