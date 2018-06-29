@@ -58,6 +58,18 @@ namespace WordCounter.Tests
             Assert.AreEqual(3, testRepeatCounter.GetTotalCount());
         }
 
+        [TestMethod]
+        public void GetOutcome_GetsOutcomeNumbersInLargerNumber_Int()
+        {
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string testNumber = "3";
+            string testLargeNumber = "3213";
+            testRepeatCounter.SetUserWord(testNumber);
+            testRepeatCounter.SetUserPhrase(testLargeNumber);
+            testRepeatCounter.GetOutcome();
+            Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
+        }
+
 
     }
 }
