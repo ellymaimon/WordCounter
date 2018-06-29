@@ -20,7 +20,7 @@ namespace WordCounter.Tests
         public void GetSetUserPhrase_GetSetUserPhrase_String()
         {
             RepeatCounter testRepeatCounter = new RepeatCounter();
-            string testPhrase = "test test";
+            string testPhrase = "test test test";
             testRepeatCounter.SetUserPhrase(testPhrase);
             Assert.AreEqual(testPhrase, testRepeatCounter.GetUserPhrase());
         }
