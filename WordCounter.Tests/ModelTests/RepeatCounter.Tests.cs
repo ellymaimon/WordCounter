@@ -15,5 +15,14 @@ namespace WordCounter.Tests
             testRepeatCounter.SetUserWord(test);
             Assert.AreEqual("test", testRepeatCounter.GetUserWord());
         }
+
+        [TestMethod]
+        public void GetSetUserPhrase_GetSetUserPhrase_String()
+        {
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string test = "test test";
+            testRepeatCounter.SetUserPhrase(test);
+            Assert.AreEqual("test test", testRepeatCounter.GetUserPhrase());
+        }
     }
 }

@@ -5,7 +5,8 @@ namespace WordCounter
 {
     public class RepeatCounter
     {
-        private string _userWord;
+        private string _userWord; //Word to test against
+        private string _userPhrase; //Phrase to find Word in
 
         public void SetUserWord(string word)
         {
@@ -15,6 +16,16 @@ namespace WordCounter
         public string GetUserWord()
         {
             return _userWord;
+        }
+
+        public void SetUserPhrase(string word)
+        {
+            _userPhrase = word;
+        }
+
+        public string GetUserPhrase()
+        {
+            return _userPhrase;
         }
     }
 }
