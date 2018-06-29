@@ -40,7 +40,7 @@ A simple application written in C# that returns a count of how many times a give
 
 ## Links
 
-* Link to repository for this website:
+* Link to repository for this website: https://github.com/ellymaimon/WordCounter
 
 ## License
 
