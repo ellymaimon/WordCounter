@@ -10,8 +10,7 @@ namespace WordCounter.Tests
         [TestMethod]
         public void DoIPass_TestToSeeIfThisWorks_True()
         {
-            Counter newObject = new Counter();
-            Assert.AreEqual(true, newObject.DoIPass());
+            
         }
     }
 }

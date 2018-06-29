@@ -5,9 +5,6 @@ namespace WordCounter
 {
     public class Counter
     {
-        public bool DoIPass()
-        {
-            return true;
-        }
+        
     }
 }
