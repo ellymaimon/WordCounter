@@ -42,44 +42,56 @@ namespace WordCounter.Tests
             string testWord = "test";
             testRepeatCounter.SetUserWord(testLetter);
             testRepeatCounter.SetUserPhrase(testWord);
-            testRepeatCounter.GetOutcome();
+            testRepeatCounter.GetOutcomeLettersInWord();
             Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
         }
 
         [TestMethod]
-        public void GetOutcome_GetsOutcomeLettersInWordCaseInsensitive_Int()
+        public void GetOutcomeLettersInWord_GetsOutcomeLettersInWordCaseInsensitive_Int()
         {
             RepeatCounter testRepeatCounter = new RepeatCounter();
             string testLetter = "t";
             string testWord = "TesterT";
             testRepeatCounter.SetUserWord(testLetter);
             testRepeatCounter.SetUserPhrase(testWord);
-            testRepeatCounter.GetOutcome();
+            testRepeatCounter.GetOutcomeLettersInWord();
             Assert.AreEqual(3, testRepeatCounter.GetTotalCount());
         }
 
         [TestMethod]
-        public void GetOutcome_GetsOutcomeNumbersInLargerNumber_Int()
+        public void GetOutcomeLettersInWord_GetsOutcomeNumbersInLargerNumber_Int()
         {
             RepeatCounter testRepeatCounter = new RepeatCounter();
             string testNumber = "3";
             string testLargeNumber = "3213";
             testRepeatCounter.SetUserWord(testNumber);
             testRepeatCounter.SetUserPhrase(testLargeNumber);
-            testRepeatCounter.GetOutcome();
+            testRepeatCounter.GetOutcomeLettersInWord();
             Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
         }
 
         [TestMethod]
-        public void GetOutcome_GetsOutcomeLettersInMixedWord_Int()
+        public void GetOutcomeLettersInWord_GetsOutcomeLettersInMixedWord_Int()
         {
             RepeatCounter testRepeatCounter = new RepeatCounter();
             string testLetter = "g";
             string testMixedWord = "3go3go2";
             testRepeatCounter.SetUserWord(testLetter);
             testRepeatCounter.SetUserPhrase(testMixedWord);
-            testRepeatCounter.GetOutcome();
+            testRepeatCounter.GetOutcomeLettersInWord();
             Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
+        }
+
+        [TestMethod]
+        public void GetOutcomeWordsInPhrase_GetsOutcomeWordInWord_Int()
+        {
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string testWord1 = "test";
+            string testWord2 = "test";
+            testRepeatCounter.SetUserWord(testWord1);
+            testRepeatCounter.SetUserPhrase(testWord2);
+            testRepeatCounter.GetOutcomeWordsInPhrase();
+            Assert.AreEqual(1, testRepeatCounter.GetTotalCount());
         }
 
 

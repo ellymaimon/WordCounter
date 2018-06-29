@@ -39,7 +39,7 @@ namespace WordCounter
             return _totalCount;
         }
 
-        public void GetOutcome()
+        public void GetOutcomeLettersInWord()
         {
             foreach (char letterInWord in GetUserWord())
             {
@@ -47,6 +47,15 @@ namespace WordCounter
                 {
                     if (letterInWord == letterInPhrase) IncrementTotalCount();
                 }
+            }
+        }
+
+        public void GetOutcomeWordsInPhrase()
+        {
+            string[] splitPhrase = GetUserPhrase().Split(' ');
+            foreach (string word in splitPhrase)
+            {
+                if (GetUserWord() == word) IncrementTotalCount();
             }
         }
 
