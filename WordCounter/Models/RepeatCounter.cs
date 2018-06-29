@@ -73,18 +73,13 @@ namespace WordCounter
 
         public void GetOutcomePhraseInPhrase()
         {
-            string[] SplitWord = GetUserWord().Split(' ');
-            SplitPhrase();
-            int counter = 0;
-            foreach (string word in SplitWord)
+            string[] userWordArray = { GetUserWord() };
+            string[] userPhraseArray = { GetUserPhrase() };
+            foreach (string word in userPhraseArray)
             {
-                foreach (string otherWord in GetSplitPhrase())
-                {
-                    if (word == otherWord) counter++;
-                }
-                int timesToIncrement = counter / SplitWord.Length;
-                while (counter < timesToIncrement) IncrementTotalCount();
+                if (GetUserWord() == word) IncrementTotalCount();
             }
+
         }
 
         public void GetOutcome()
