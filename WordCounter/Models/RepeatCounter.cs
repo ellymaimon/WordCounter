@@ -73,13 +73,12 @@ namespace WordCounter
 
         public void GetOutcomePhraseInPhrase()
         {
-            string[] userWordArray = { GetUserWord() };
-            string[] userPhraseArray = { GetUserPhrase() };
-            foreach (string word in userPhraseArray)
-            {
-                if (GetUserWord() == word) IncrementTotalCount();
-            }
-
+            int i = 0;
+               while ((i = GetUserPhrase().IndexOf(GetUserWord(), i)) != -1)
+               {
+                   IncrementTotalCount();
+                   i++;
+               }
         }
 
         public void GetOutcome()

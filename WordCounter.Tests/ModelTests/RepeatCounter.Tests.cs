@@ -206,11 +206,11 @@ namespace WordCounter.Tests
         {
             RepeatCounter testRepeatCounter = new RepeatCounter();
             string testWord = "test me";
-            string testPhrase = "test me please test me test";
+            string testPhrase = "dont test me please test me test test me test me";
             testRepeatCounter.SetUserWord(testWord);
             testRepeatCounter.SetUserPhrase(testPhrase);
             testRepeatCounter.GetOutcomePhraseInPhrase();
-            Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
+            Assert.AreEqual(4, testRepeatCounter.GetTotalCount());
         }
 
         // [TestMethod]
