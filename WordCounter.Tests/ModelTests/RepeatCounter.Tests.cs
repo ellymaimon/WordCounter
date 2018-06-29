@@ -154,6 +154,18 @@ namespace WordCounter.Tests
             Assert.AreEqual(3, testRepeatCounter.GetTotalCount());
         }
 
+        [TestMethod]
+        public void GetOutcomeWordsInPhrase_GetsOutcomeeWordsInPhraseNoPunctuation_Int()
+        {
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string testWord = "test";
+            string testPhrase = "test, and then we test.";
+            testRepeatCounter.SetUserWord(testWord);
+            testRepeatCounter.SetUserPhrase(testPhrase);
+            testRepeatCounter.GetOutcomeWordsInPhrase();
+            Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
+        }
+
 
     }
 }

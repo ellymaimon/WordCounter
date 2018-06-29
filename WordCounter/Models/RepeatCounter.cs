@@ -52,7 +52,8 @@ namespace WordCounter
 
         public void GetOutcomeWordsInPhrase()
         {
-            string[] splitPhrase = GetUserPhrase().Split(' ');
+            char[] specialCharacters = {',', '.', '!', '?', ' ', '"', '-', '(', ')'};
+            string[] splitPhrase = GetUserPhrase().Split(specialCharacters);
             foreach (string word in splitPhrase)
             {
                 if (GetUserWord() == word) IncrementTotalCount();
