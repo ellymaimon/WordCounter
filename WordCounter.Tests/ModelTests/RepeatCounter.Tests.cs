@@ -35,7 +35,7 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
-        public void GetOutcome_GetsOutcomeLettersInWord_Int()
+        public void GetOutcomeLettersInWord_GetsOutcomeLettersInWord_Int()
         {
             RepeatCounter testRepeatCounter = new RepeatCounter();
             string testLetter = "t";
@@ -95,7 +95,7 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
-        public void GetOutcomeWordsInPhrase_GetsOutcomeeWordsInPhrase_Int()
+        public void GetOutcomeWordsInPhrase_GetsOutcomeeWordInPhrase_Int()
         {
             RepeatCounter testRepeatCounter = new RepeatCounter();
             string testWord = "test";
@@ -105,6 +105,19 @@ namespace WordCounter.Tests
             testRepeatCounter.GetOutcomeWordsInPhrase();
             Assert.AreEqual(1, testRepeatCounter.GetTotalCount());
         }
+
+        [TestMethod]
+        public void GetOutcomeWordsInPhrase_GetsOutcomeeWordsInPhrase_Int()
+        {
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string testWord = "test";
+            string testPhrase = "and test then test and we test things";
+            testRepeatCounter.SetUserWord(testWord);
+            testRepeatCounter.SetUserPhrase(testPhrase);
+            testRepeatCounter.GetOutcomeWordsInPhrase();
+            Assert.AreEqual(3, testRepeatCounter.GetTotalCount());
+        }
+
 
 
     }
