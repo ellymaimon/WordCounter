@@ -74,16 +74,17 @@ namespace WordCounter
         public void GetOutcomePhraseInPhrase()
         {
             int i = 0;
-               while ((i = GetUserPhrase().IndexOf(GetUserWord(), i)) != -1)
-               {
-                   IncrementTotalCount();
-                   i++;
-               }
+            while ((i = GetUserPhrase().IndexOf(GetUserWord(), i)) != -1)
+            {
+                IncrementTotalCount();
+                i++;
+            }
         }
 
         public void GetOutcome()
         {
             if (GetUserWord().Length == 1) GetOutcomeLettersInWord();
+            else if (GetUserWord().Contains(" ")) GetOutcomePhraseInPhrase();
             else GetOutcomeWordsInPhrase();
         }
     }

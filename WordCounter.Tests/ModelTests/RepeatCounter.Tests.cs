@@ -213,16 +213,16 @@ namespace WordCounter.Tests
             Assert.AreEqual(4, testRepeatCounter.GetTotalCount());
         }
 
-        // [TestMethod]
-        // public void GetOutcome_GetsOutcomeBasedOnMultipleWordInput_Int()
-        // {
-        //     RepeatCounter testRepeatCounter = new RepeatCounter();
-        //     string testWord = "test me";
-        //     string testPhrase = "test, test me and test me";
-        //     testRepeatCounter.SetUserWord(testWord);
-        //     testRepeatCounter.SetUserPhrase(testPhrase);
-        //     testRepeatCounter.GetOutcome();
-        //     Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
-        // }
+        [TestMethod]
+        public void GetOutcome_GetsOutcomeBasedOnMultipleWordInput_Int()
+        {
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string testWord = "test me";
+            string testPhrase = "dont test me please test me test test me test me";
+            testRepeatCounter.SetUserWord(testWord);
+            testRepeatCounter.SetUserPhrase(testPhrase);
+            testRepeatCounter.GetOutcome();
+            Assert.AreEqual(4, testRepeatCounter.GetTotalCount());
+        }
     }
 }
