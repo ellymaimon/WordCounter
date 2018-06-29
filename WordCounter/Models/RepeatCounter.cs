@@ -5,10 +5,10 @@ namespace WordCounter
 {
     public class RepeatCounter
     {
-        private string _userWord; //Word to test against
-        private string _userPhrase; //Phrase to find Word in
-        private string[] _splitPhrase; //Phrase split into an array of words
-        private int _totalCount; //Counts up the total to output at the end
+        private string _userWord;
+        private string _userPhrase;
+        private string[] _splitPhrase;
+        private int _totalCount;
 
         public void SetUserWord(string word)
         {
