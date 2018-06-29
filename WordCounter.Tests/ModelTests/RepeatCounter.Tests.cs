@@ -8,9 +8,12 @@ namespace WordCounter.Tests
     public class RepeatCounterTests
     {
         [TestMethod]
-        public void DoIPass_TestToSeeIfThisWorks_True()
+        public void GetSetUserWord_GetSetUserWord_String()
         {
-
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string test = "test";
+            testRepeatCounter.SetUserWord(test);
+            Assert.AreEqual("test", testRepeatCounter.GetUserWord());
         }
     }
 }
