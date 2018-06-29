@@ -33,5 +33,17 @@ namespace WordCounter.Tests
             while(testRepeatCounter.GetTotalCount() < 4) testRepeatCounter.IncrementTotalCount();
             Assert.AreEqual(testTotal, testRepeatCounter.GetTotalCount());
         }
+
+        [TestMethod]
+        public void GetOutcome_GetsOutcomeLettersInWord_Int()
+        {
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string testLetter = "t";
+            string testWord = "test";
+            testRepeatCounter.SetUserWord(testLetter);
+            testRepeatCounter.SetUserPhrase(testWord);
+            GetOutcome();
+            Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
+        }
     }
 }
