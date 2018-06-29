@@ -42,7 +42,7 @@ namespace WordCounter.Tests
             string testWord = "test";
             testRepeatCounter.SetUserWord(testLetter);
             testRepeatCounter.SetUserPhrase(testWord);
-            GetOutcome();
+            testRepeatCounter.GetOutcome();
             Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
         }
     }

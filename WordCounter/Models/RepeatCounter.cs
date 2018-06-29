@@ -39,16 +39,16 @@ namespace WordCounter
             return _totalCount;
         }
 
-        // public void GetOutcome()
-        // {
-        //     foreach (char letterInWord in GetUserWord())
-        //     {
-        //         foreach (char letterInPhrase in GetUserPhrase())
-        //         {
-        //             if (letterInWord == letterInPhrase) IncrementTotalCount();
-        //         }
-        //     }
-        // }
+        public void GetOutcome()
+        {
+            foreach (char letterInWord in GetUserWord())
+            {
+                foreach (char letterInPhrase in GetUserPhrase())
+                {
+                    if (letterInWord == letterInPhrase) IncrementTotalCount();
+                }
+            }
+        }
 
     }
 }
