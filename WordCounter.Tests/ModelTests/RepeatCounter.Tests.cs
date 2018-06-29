@@ -224,5 +224,17 @@ namespace WordCounter.Tests
             testRepeatCounter.GetOutcome();
             Assert.AreEqual(4, testRepeatCounter.GetTotalCount());
         }
+
+        [TestMethod]
+        public void GetOutcome_GetsOutcomeBasedOnComplexInput_Int()
+        {
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string testWord = "test 3me!";
+            string testPhrase = "dont test 3me! please test me test test 3ME! test me";
+            testRepeatCounter.SetUserWord(testWord);
+            testRepeatCounter.SetUserPhrase(testPhrase);
+            testRepeatCounter.GetOutcome();
+            Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
+        }
     }
 }
