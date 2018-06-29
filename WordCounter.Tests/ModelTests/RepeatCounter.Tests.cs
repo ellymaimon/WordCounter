@@ -118,6 +118,18 @@ namespace WordCounter.Tests
             Assert.AreEqual(3, testRepeatCounter.GetTotalCount());
         }
 
+        [TestMethod]
+        public void GetOutcomeWordsInPhrase_GetsOutcomeeWordsInPhraseCaseInsensitive_Int()
+        {
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string testWord = "test";
+            string testPhrase = "and Test then test and we TEST things tESt";
+            testRepeatCounter.SetUserWord(testWord);
+            testRepeatCounter.SetUserPhrase(testPhrase);
+            testRepeatCounter.GetOutcomeWordsInPhrase();
+            Assert.AreEqual(4, testRepeatCounter.GetTotalCount());
+        }
+
 
 
     }
