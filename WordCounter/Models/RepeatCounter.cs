@@ -71,6 +71,22 @@ namespace WordCounter
             }
         }
 
+        public void GetOutcomePhraseInPhrase()
+        {
+            string[] SplitWord = GetUserWord().Split(' ');
+            SplitPhrase();
+            int counter = 0;
+            foreach (string word in SplitWord)
+            {
+                foreach (string otherWord in GetSplitPhrase())
+                {
+                    if (word == otherWord) counter++;
+                }
+                int timesToIncrement = counter / SplitWord.Length;
+                while (counter < timesToIncrement) IncrementTotalCount();
+            }
+        }
+
         public void GetOutcome()
         {
             if (GetUserWord().Length == 1) GetOutcomeLettersInWord();

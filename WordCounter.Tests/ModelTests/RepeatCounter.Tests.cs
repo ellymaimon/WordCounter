@@ -202,15 +202,27 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
-        public void GetOutcome_GetsOutcomeBasedOnMultipleWordInput_Int()
+        public void GetOutcomePhraseInPhrase_GetsOutcomeBasedOnMultipleWordInput_Int()
         {
             RepeatCounter testRepeatCounter = new RepeatCounter();
             string testWord = "test me";
-            string testPhrase = "test, test me and test me";
+            string testPhrase = "test me please test me test";
             testRepeatCounter.SetUserWord(testWord);
             testRepeatCounter.SetUserPhrase(testPhrase);
-            testRepeatCounter.GetOutcome();
+            testRepeatCounter.GetOutcomePhraseInPhrase();
             Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
         }
+
+        // [TestMethod]
+        // public void GetOutcome_GetsOutcomeBasedOnMultipleWordInput_Int()
+        // {
+        //     RepeatCounter testRepeatCounter = new RepeatCounter();
+        //     string testWord = "test me";
+        //     string testPhrase = "test, test me and test me";
+        //     testRepeatCounter.SetUserWord(testWord);
+        //     testRepeatCounter.SetUserPhrase(testPhrase);
+        //     testRepeatCounter.GetOutcome();
+        //     Assert.AreEqual(2, testRepeatCounter.GetTotalCount());
+        // }
     }
 }
