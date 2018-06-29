@@ -25,6 +25,7 @@ A simple application written in C# that returns a count of how many times a give
 | Program finds how many times a number shows up in a given phrase despite the number being in a word. | "3" "3Hello 3 peopl3e" | "3" | Further complexity by forcing the program to take into account having to search inside a word for a number. |
 | Program finds how many times a word shows up in a given phrase despite the word being adjacent to a punctuation mark. | "hello" "hello, to you, hello." | "2" | Further complexity by forcing the program to take into account having to ignore punctuation marks. |
 | Program determines whether to look for single letters or a whole word based on inputs. | "hi" "high hi yo hi" OR "h" "high hi yo hi" | "2" OR "4"| Adding automated determination between single character inputs and multiple character inputs for further level of complexity. |
+| Program accepts multiple word input. | "hi there" "hi hi there hi" | "1" | Further expanding on idea by accepting multiple word input to search phrase for. |
 
 ## Setup on OSX
 
